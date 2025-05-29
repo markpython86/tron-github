@@ -21,13 +21,13 @@ Contrib Tron is a CLI tool that generates a playable Tron Light Cycles game usin
 ### Installation
 
 ```bash
-npm install -g contrib-tron
+npm install -g tron-github
 ```
 
 ### Create Your Game
 
 ```bash
-npx contrib-tron init --user YOUR_GITHUB_USERNAME
+npx tron-github init --user YOUR_GITHUB_USERNAME
 ```
 
 This creates a complete project with:
@@ -40,7 +40,7 @@ This creates a complete project with:
 ### Local Development
 
 ```bash
-cd contrib-tron
+cd tron-github
 npm install
 npm run dev
 ```
@@ -54,7 +54,7 @@ npm run dev
    git add .
    git commit -m "Initial commit"
    git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/contrib-tron.git
+   git remote add origin https://github.com/YOUR_USERNAME/tron-github.git
    git push -u origin main
    ```
 
@@ -66,7 +66,7 @@ npm run dev
 
 3. **Your game will be live at**:
    ```
-   https://YOUR_USERNAME.github.io/contrib-tron/
+   https://YOUR_USERNAME.github.io/tron-github/
    ```
 
 ## 🎮 How to Play
@@ -91,7 +91,7 @@ Add this to your GitHub profile README to showcase your game:
 <div align="center">
   <h3>🏍️ Play Tron on My Contribution Grid!</h3>
   <iframe
-    src="https://YOUR_USERNAME.github.io/contrib-tron/"
+    src="https://YOUR_USERNAME.github.io/tron-github/"
     width="740"
     height="200"
     style="border:0; overflow:hidden; border-radius: 8px;"
@@ -105,7 +105,7 @@ Add this to your GitHub profile README to showcase your game:
 ## 🛠️ Project Structure
 
 ```
-contrib-tron/
+tron-github/
 ├── public/
 │   └── index.html          # Game HTML with beautiful UI
 ├── src/
@@ -162,11 +162,11 @@ ctx.fillStyle = "#00ff88"; // Green trail
 
 ```bash
 # Initialize new project
-contrib-tron init --user <username> [--dir <directory>]
+tron-github init --user <username> [--dir <directory>]
 
 # Options:
 #   --user <username>    GitHub username (required)
-#   --dir <directory>    Project directory name (default: "contrib-tron")
+#   --dir <directory>    Project directory name (default: "tron-github")
 ```
 
 ### Game API
@@ -201,8 +201,8 @@ We welcome contributions! Here's how to get started:
 ### Development Setup
 
 ```bash
-git clone https://github.com/contrib-tron/contrib-tron.git
-cd contrib-tron
+git clone https://github.com/markpython86/tron-github.git
+cd tron-github
 npm install
 npm run dev
 ```
@@ -219,8 +219,8 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ## 🐛 Issues & Support
 
-- 🐛 **Bug Reports**: [GitHub Issues](https://github.com/contrib-tron/contrib-tron/issues)
-- 💡 **Feature Requests**: [GitHub Discussions](https://github.com/contrib-tron/contrib-tron/discussions)
+- 🐛 **Bug Reports**: [GitHub Issues](https://github.com/markpython86/tron-github/issues)
+- 💡 **Feature Requests**: [GitHub Discussions](https://github.com/markpython86/tron-github/discussions)
 - 📧 **Support**: Open an issue with the `help wanted` label
 
 ---

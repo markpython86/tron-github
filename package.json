@@ -1,10 +1,10 @@
 {
-  "name": "contrib-tron",
+  "name": "tron-github",
   "version": "1.0.0",
   "description": "Play Tron Light Cycles on your GitHub contribution grid",
   "main": "dist/cli.js",
   "bin": {
-    "contrib-tron": "dist/cli.js"
+    "tron-github": "dist/cli.js"
   },
   "scripts": {
     "build": "tsc",
@@ -19,7 +19,7 @@
     "cli",
     "visualization"
   ],
-  "author": "contrib-tron",
+  "author": "markpython86",
   "license": "MIT",
   "dependencies": {
     "commander": "^11.1.0",
