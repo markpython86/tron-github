@@ -1,12 +1,10 @@
-name: Deploy to GitHub Pages and Generate Animation
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-  schedule:
-    - cron: "0 12 * * *" # Daily at noon for animation updates
 
 jobs:
   build-and-deploy:
@@ -36,21 +34,6 @@ jobs:
     
     - name: Build
       run: npm run build
-    
-    - name: Generate Live Animation
-      run: |
-        # Extract username from repository name or use default
-        USERNAME=$(echo "${{ github.repository }}" | cut -d'/' -f1)
-        echo "Generating animation for user: $USERNAME"
-        
-        # Create output directory
-        mkdir -p dist/animations
-        
-        # Generate animated SVG from live game capture
-        npm run capture "$USERNAME" "dist/animations/tron-github-live.svg"
-        
-        # Create dark version
-        sed 's/#0d1117/#000000/g; s/#161b22/#0d1117/g' dist/animations/tron-github-live.svg > dist/animations/tron-github-live-dark.svg
     
     - name: Setup Pages
       uses: actions/configure-pages@v4

@@ -1,7 +1,7 @@
 {
   "name": "tron-github",
   "version": "1.0.0",
-  "description": "Play Tron Light Cycles on your GitHub contribution grid",
+  "description": "Create auto-playing Tron Light Cycles games on GitHub contribution grids",
   "main": "dist/cli.js",
   "bin": {
     "tron-github": "dist/cli.js"
@@ -31,7 +31,11 @@
     "typescript": "^5.3.0"
   },
   "files": [
-    "dist/**/*",
-    "templates/**/*"
-  ]
+    "dist/*",
+    "templates/*",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  }
 }

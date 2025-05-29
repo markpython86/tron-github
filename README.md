@@ -1,231 +1,133 @@
 # 🏍️ Contrib Tron
 
-**Play Tron Light Cycles on your GitHub contribution grid!**
-
-Contrib Tron is a CLI tool that generates a playable Tron Light Cycles game using your real GitHub contribution calendar as the game board. Navigate your light cycle through your coding history while avoiding trails and edges!
-
-![Contrib Tron Demo](https://user-images.githubusercontent.com/placeholder/demo.gif)
+Transform your GitHub contribution grid into an auto-playing Tron Light Cycles arena! Watch AI-controlled motorcycles race through your coding activity, leaving glowing trails in their wake.
 
 ## ✨ Features
 
-- 🎮 **Classic Tron Gameplay**: Control a light cycle that leaves a persistent trail
-- 📊 **Real GitHub Data**: Uses your actual contribution calendar as the game board
-- 🎨 **Beautiful Visuals**: Neon-styled graphics with glowing effects and particles
-- 🚀 **Easy Deployment**: One-command setup with automatic GitHub Pages deployment
-- 📱 **Embeddable**: Perfect for your GitHub profile README
-- ⚡ **60fps Performance**: Smooth canvas-based rendering
-- 🎯 **Progressive Difficulty**: Game speed increases as your score grows
+- **Auto-Playing Game**: Watch AI light cycles race without any interaction needed
+- **Real GitHub Data**: Uses your actual contribution patterns as the game arena
+- **Advanced AI**: Neural network-inspired pathfinding with 8 evaluation factors
+- **Continuous Loop**: Perfect for embedding in GitHub profiles
+- **Easy Setup**: One command creates a complete project
+- **Auto-Deploy**: GitHub Actions automatically deploys to GitHub Pages
 
 ## 🚀 Quick Start
 
-### Installation
-
 ```bash
-npm install -g tron-github
-```
-
-### Create Your Game
-
-```bash
-npx tron-github init --user YOUR_GITHUB_USERNAME
-```
-
-This creates a complete project with:
-
-- 🎮 Fully functional Tron game
-- 📦 Vite build configuration
-- 🚀 GitHub Actions for auto-deployment
-- 🎨 Beautiful, responsive UI
-
-### Local Development
-
-```bash
+npx contrib-tron init --user YOUR_GITHUB_USERNAME
 cd tron-github
 npm install
 npm run dev
 ```
 
-### Deploy to GitHub Pages
+## 🎮 How It Works
 
-1. **Push to GitHub**:
+1. **Fetches Your Data**: Pulls your GitHub contribution SVG
+2. **Maps the Arena**: Converts 7×52 grid (days × weeks) into game space
+3. **AI Racing**: 4 light cycles with different strategies compete
+4. **Persistent Trails**: Cycles leave permanent light trails
+5. **Collision Detection**: Game resets when cycles crash
 
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit"
-   git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/tron-github.git
-   git push -u origin main
-   ```
+## 🤖 AI System
 
-2. **Enable GitHub Pages**:
+Each light cycle uses sophisticated pathfinding with:
 
-   - Go to your repository settings
-   - Navigate to "Pages" section
-   - Select "GitHub Actions" as the source
+- **Safety Analysis**: 10-step collision lookahead
+- **Space Evaluation**: Open area detection
+- **Edge Avoidance**: Boundary risk assessment
+- **Memory System**: Path diversity tracking
+- **Future Planning**: Multi-step option evaluation
+- **Exploration Bonus**: Encourages new territory
+- **Weighted Decisions**: Softmax-style action selection
 
-3. **Your game will be live at**:
-   ```
-   https://YOUR_USERNAME.github.io/tron-github/
-   ```
-
-## 🎮 How to Play
-
-- **Arrow Keys** or **WASD**: Control your light cycle direction
-- **Space**: Pause/Resume game
-- **Objective**: Survive as long as possible without hitting trails or edges
-- **Scoring**: Your score increases with the length of your trail
-
-### Game Rules
-
-1. 🚫 **No 180° turns**: You can't reverse directly into your trail
-2. 💥 **Avoid collisions**: Don't hit your trail or the grid edges
-3. ⚡ **Speed increases**: The game gets faster as your score grows
-4. 🎯 **Beat your high score**: Challenge yourself to improve!
-
-## 📱 Embed in Your Profile
-
-Add this to your GitHub profile README to showcase your game:
-
-```html
-<div align="center">
-  <h3>🏍️ Play Tron on My Contribution Grid!</h3>
-  <iframe
-    src="https://YOUR_USERNAME.github.io/tron-github/"
-    width="740"
-    height="200"
-    style="border:0; overflow:hidden; border-radius: 8px;"
-    title="Contrib Tron Game"
-  >
-  </iframe>
-  <p><em>Use arrow keys to play!</em></p>
-</div>
-```
-
-## 🛠️ Project Structure
+## 📦 Project Structure
 
 ```
-tron-github/
-├── public/
-│   └── index.html          # Game HTML with beautiful UI
+your-tron-project/
 ├── src/
-│   ├── api.ts             # GitHub data fetching & parsing
-│   ├── renderer.ts        # Canvas rendering & visual effects
-│   ├── game.ts           # Core Tron game logic
-│   └── main.ts           # Game initialization & loop
-├── .github/workflows/
-│   └── gh-pages.yml      # Auto-deployment workflow
-├── package.json          # Dependencies & scripts
-├── tsconfig.json         # TypeScript configuration
-└── vite.config.ts        # Build configuration
+│   ├── main.ts          # Game initialization
+│   ├── game.ts          # Core game logic
+│   ├── renderer.ts      # Canvas rendering
+│   └── api.ts           # GitHub data fetching
+├── index.html           # Game interface
+├── package.json         # Dependencies
+└── .github/workflows/   # Auto-deployment
 ```
+
+## 🌐 Deployment
+
+The generated project includes GitHub Actions for automatic deployment:
+
+1. Create a GitHub repository
+2. Push your code
+3. Enable GitHub Pages (source: GitHub Actions)
+4. Your game will be live at `https://username.github.io/repo-name/`
+
+## 📋 Embed in Profile
+
+Add this to your GitHub profile README:
+
+```markdown
+[![Tron GitHub](https://username.github.io/tron-github/preview.png)](https://username.github.io/tron-github/)
+
+🎮 Watch AI light cycles race through my contribution data!
+```
+
+## 🎯 Game Mechanics
+
+- **4 AI Cycles**: Cyan, Red, Orange, Green
+- **Scoring**: `survivalTime * 10 + activeCycles * 5 + trailLength`
+- **Auto-Restart**: 1-second delay between games
+- **Real-Time**: Updates with your latest GitHub activity
+
+## 🛠️ Development
+
+```bash
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Deploy to GitHub Pages
+npm run deploy
+```
+
+## 📊 Technical Details
+
+- **Canvas Rendering**: Smooth 60fps animation
+- **TypeScript**: Full type safety
+- **Vite**: Fast development and building
+- **Responsive**: Adapts to different screen sizes
+- **No Dependencies**: Pure vanilla implementation
 
 ## 🎨 Customization
 
-### Render Configuration
+The generated project is fully customizable:
 
-Edit `src/main.ts` to customize the visual appearance:
-
-```typescript
-const RENDER_CONFIG: RenderConfig = {
-  cellSize: 12, // Size of each grid cell
-  cellGap: 2, // Gap between cells
-  padding: 20, // Canvas padding
-};
-```
-
-### Game Mechanics
-
-Modify `src/game.ts` to adjust gameplay:
-
-```typescript
-// Starting speed (lower = faster)
-this.speed = 200;
-
-// Speed increase rate
-this.speed = Math.max(100, 200 - Math.floor(this.score / 10) * 5);
-```
-
-### Visual Effects
-
-Customize colors and effects in `src/renderer.ts`:
-
-```typescript
-// Cycle colors
-ctx.fillStyle = "#00d4ff"; // Cyan cycle
-ctx.fillStyle = "#00ff88"; // Green trail
-```
-
-## 🔧 API Reference
-
-### CLI Commands
-
-```bash
-# Initialize new project
-tron-github init --user <username> [--dir <directory>]
-
-# Options:
-#   --user <username>    GitHub username (required)
-#   --dir <directory>    Project directory name (default: "tron-github")
-```
-
-### Game API
-
-The game exposes a debug API on `window.contribTron`:
-
-```javascript
-// Access current game instance
-window.contribTron.game();
-
-// Restart game
-window.contribTron.restart();
-
-// Get current score
-window.contribTron.getScore();
-
-// Get game state
-window.contribTron.getState();
-```
+- Modify AI behavior in `game.ts`
+- Adjust visual styling in `renderer.ts`
+- Change game rules and scoring
+- Add new cycle types or behaviors
 
 ## 🤝 Contributing
 
-We welcome contributions! Here's how to get started:
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
 
-1. **Fork the repository**
-2. **Create a feature branch**: `git checkout -b feature/amazing-feature`
-3. **Make your changes** and add tests
-4. **Commit your changes**: `git commit -m 'Add amazing feature'`
-5. **Push to the branch**: `git push origin feature/amazing-feature`
-6. **Open a Pull Request**
+## 📄 License
 
-### Development Setup
+MIT License - feel free to use this in your own projects!
 
-```bash
-git clone https://github.com/markpython86/tron-github.git
-cd tron-github
-npm install
-npm run dev
-```
+## 🎉 Examples
 
-## 📝 License
+Check out these live examples:
 
-MIT License - see [LICENSE](LICENSE) for details.
-
-## 🙏 Acknowledgments
-
-- Inspired by the classic Tron Light Cycles game
-- Built with modern web technologies (TypeScript, Vite, Canvas API)
-- GitHub contribution calendar design inspiration
-
-## 🐛 Issues & Support
-
-- 🐛 **Bug Reports**: [GitHub Issues](https://github.com/markpython86/tron-github/issues)
-- 💡 **Feature Requests**: [GitHub Discussions](https://github.com/markpython86/tron-github/discussions)
-- 📧 **Support**: Open an issue with the `help wanted` label
+- [Demo Game](https://username.github.io/tron-github/) - See it in action
+- [Profile Integration](https://github.com/username) - Embedded in README
 
 ---
 
-<div align="center">
-  <strong>Made with ❤️ for the GitHub community</strong><br>
-  <em>Turn your coding journey into a game!</em>
-</div>
+**Transform your GitHub profile into a gaming arena!** 🏍️✨

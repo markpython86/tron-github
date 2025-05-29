@@ -7,18 +7,11 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "npm run build && gh-pages -d dist",
-    "capture": "tsx scripts/capture.ts",
-    "generate-svg": "tsx scripts/generate-svg.ts"
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "devDependencies": {
     "typescript": "^5.3.0",
     "vite": "^5.0.0",
-    "gh-pages": "^6.1.0",
-    "puppeteer": "^21.0.0",
-    "@types/puppeteer": "^7.0.4",
-    "node-svg2img": "^1.1.0",
-    "tsx": "^4.0.0",
-    "@types/node": "^20.0.0"
+    "gh-pages": "^6.1.0"
   }
 }

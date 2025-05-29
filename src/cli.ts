@@ -8,12 +8,14 @@ const program = new Command();
 
 program
   .name("tron-github")
-  .description("Play Tron Light Cycles on your GitHub contribution grid")
+  .description(
+    "Create an auto-playing Tron Light Cycles game on your GitHub contribution grid"
+  )
   .version("1.0.0");
 
 program
   .command("init")
-  .description("Initialize a new tron-github project")
+  .description("Initialize a new Tron GitHub project")
   .requiredOption("--user <username>", "GitHub username")
   .option("--dir <directory>", "Project directory name", "tron-github")
   .action(async (options) => {
@@ -40,21 +42,28 @@ program
       packageJson.name = `${user}-tron-github`;
       await fs.writeJson(packageJsonPath, packageJson, { spaces: 2 });
 
-      console.log(`✅ tron-github project created successfully!`);
+      console.log(`🏍️ Tron GitHub project created successfully!`);
       console.log(`📁 Project location: ${projectPath}`);
       console.log(`\n🚀 Next steps:`);
       console.log(`   cd ${dir}`);
       console.log(`   npm install`);
       console.log(`   npm run dev`);
       console.log(`\n🌐 To deploy to GitHub Pages:`);
-      console.log(`   1. Push to GitHub`);
-      console.log(`   2. Enable GitHub Pages in repository settings`);
-      console.log(`   3. Add this to your profile README:`);
-      console.log(`\n<iframe`);
-      console.log(`  src="https://${user}.github.io/${dir}/"`);
-      console.log(`  width="740" height="200"`);
-      console.log(`  style="border:0; overflow:hidden;">`);
-      console.log(`</iframe>`);
+      console.log(`   1. Create a GitHub repository named "${dir}"`);
+      console.log(`   2. Push your code to the repository`);
+      console.log(
+        `   3. Enable GitHub Pages in repository settings (source: GitHub Actions)`
+      );
+      console.log(
+        `   4. Your game will be available at: https://${user}.github.io/${dir}/`
+      );
+      console.log(`\n📋 Add to your GitHub profile README:`);
+      console.log(
+        `\n[![Tron GitHub](https://${user}.github.io/${dir}/preview.png)](https://${user}.github.io/${dir}/)`
+      );
+      console.log(
+        `\n🎮 Watch AI light cycles race through your contribution data!`
+      );
     } catch (error) {
       console.error("❌ Error creating project:", error);
       process.exit(1);
