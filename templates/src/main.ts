@@ -42,8 +42,8 @@ async function init(): Promise<void> {
             <p>This project was not initialized with the CLI tool.</p>
             <p><strong>To set up properly:</strong></p>
             <ol style="text-align: left; display: inline-block; margin: 20px 0;">
-              <li>Install the CLI: <code style="background: #21262d; padding: 2px 6px; border-radius: 3px;">npm install -g contrib-tron</code></li>
-              <li>Create project: <code style="background: #21262d; padding: 2px 6px; border-radius: 3px;">contrib-tron init --user YOUR_GITHUB_USERNAME</code></li>
+              <li>Install the CLI: <code style="background: #21262d; padding: 2px 6px; border-radius: 3px;">npm install -g tron-github</code></li>
+              <li>Create project: <code style="background: #21262d; padding: 2px 6px; border-radius: 3px;">tron-github init --user YOUR_GITHUB_USERNAME</code></li>
             </ol>
             <p><em>Or manually replace "__GITHUB_USERNAME__" with your GitHub username in main.ts</em></p>
           </div>

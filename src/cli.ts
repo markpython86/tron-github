@@ -7,15 +7,15 @@ import * as path from "path";
 const program = new Command();
 
 program
-  .name("contrib-tron")
+  .name("tron-github")
   .description("Play Tron Light Cycles on your GitHub contribution grid")
   .version("1.0.0");
 
 program
   .command("init")
-  .description("Initialize a new contrib-tron project")
+  .description("Initialize a new tron-github project")
   .requiredOption("--user <username>", "GitHub username")
-  .option("--dir <directory>", "Project directory name", "contrib-tron")
+  .option("--dir <directory>", "Project directory name", "tron-github")
   .action(async (options) => {
     const { user, dir } = options;
     const projectPath = path.resolve(process.cwd(), dir);
@@ -37,10 +37,10 @@ program
       // Update package.json name
       const packageJsonPath = path.join(projectPath, "package.json");
       const packageJson = await fs.readJson(packageJsonPath);
-      packageJson.name = `${user}-contrib-tron`;
+      packageJson.name = `${user}-tron-github`;
       await fs.writeJson(packageJsonPath, packageJson, { spaces: 2 });
 
-      console.log(`✅ contrib-tron project created successfully!`);
+      console.log(`✅ tron-github project created successfully!`);
       console.log(`📁 Project location: ${projectPath}`);
       console.log(`\n🚀 Next steps:`);
       console.log(`   cd ${dir}`);
