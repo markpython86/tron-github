@@ -46,7 +46,7 @@ Add this to your GitHub profile README to embed the game:
 <div align="center">
   <h3>🏍️ My GitHub Contribution Tron Game</h3>
   <iframe
-    src="https://yourusername.github.io/contrib-tron/"
+    src="https://yourusername.github.io/tron-github/"
     width="800"
     height="400"
     frameborder="0"
@@ -59,8 +59,8 @@ Add this to your GitHub profile README to embed the game:
 
 ```bash
 # Clone and setup
-git clone https://github.com/yourusername/contrib-tron.git
-cd contrib-tron
+git clone https://github.com/yourusername/tron-github.git
+cd tron-github
 npm install
 
 # Start development server
@@ -153,7 +153,7 @@ The included GitHub Actions workflow automatically deploys your game:
 1. **Push to main branch**
 2. **GitHub Actions builds the project**
 3. **Deploys to GitHub Pages**
-4. **Game available at**: `https://yourusername.github.io/contrib-tron/`
+4. **Game available at**: `https://yourusername.github.io/tron-github/`
 
 ### Manual Deployment
 
@@ -221,7 +221,7 @@ Add your Contrib Tron game to the showcase by opening a PR with your GitHub user
 <div align="center">
   <strong>Transform your GitHub profile into an epic gaming arena! 🏍️⚡</strong>
   <br><br>
-  <a href="https://github.com/yourusername/contrib-tron">⭐ Star this repo</a> •
-  <a href="https://github.com/yourusername/contrib-tron/issues">🐛 Report bugs</a> •
-  <a href="https://github.com/yourusername/contrib-tron/discussions">💬 Discussions</a>
+  <a href="https://github.com/yourusername/tron-github">⭐ Star this repo</a> •
+  <a href="https://github.com/yourusername/tron-github/issues">🐛 Report bugs</a> •
+  <a href="https://github.com/yourusername/tron-github/discussions">💬 Discussions</a>
 </div>
