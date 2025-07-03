@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Create auto-playing Tron Light Cycles games on GitHub contribution grids",
   "main": "dist/cli.js",
+  "type": "module",
   "bin": {
     "tron-github": "dist/cli.js"
   },
