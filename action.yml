@@ -50,7 +50,7 @@ runs:
           if [[ -n "$line" ]]; then
             # Parse filename and theme
             filename=$(echo "$line" | cut -d'?' -f1)
-            theme_param=$(echo "$line" | grep -o '?theme=.*' | cut -d'=' -f2)
+            theme_param=$(echo "$line" | grep -o '?theme=.*' | cut -d'=' -f2 || echo "")
             theme=${theme_param:-light}
             
             echo "🎮 Generating $filename with theme: $theme"
