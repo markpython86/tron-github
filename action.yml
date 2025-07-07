@@ -71,9 +71,14 @@ runs:
           fi
         done
         
-        # List generated files
-        generated_files=$(ls -1 *.svg 2>/dev/null || echo "")
-        echo "files=${generated_files}" >> $GITHUB_OUTPUT
+        # List generated files with proper multiline format
+        if ls *.svg 1> /dev/null 2>&1; then
+          echo "files<<EOF" >> $GITHUB_OUTPUT
+          ls -1 *.svg >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+        else
+          echo "files=" >> $GITHUB_OUTPUT
+        fi
         
         echo "🏍️ Tron Light Cycles SVG generation complete!"
       shell: bash 
